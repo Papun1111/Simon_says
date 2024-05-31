@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Says Game</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional styles for the instruction panel */
+        .instruction-panel {
+            display: none;
+            background: rgb(63,94,251);
+background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Simon says Game</h1>
+    <h2>Level sabke niklenge! Press any key to start</h2>
+    <div class="btn-container">
+        <div class="line-one">
+            <div class="btn red" type="button" id="red">1</div>
+            <div class="btn green" type="button" id="green">2</div>
+        </div>
+        <div class="line-two">    
+            <div class="btn yellow" type="button" id="yellow">3</div>
+            <div class="btn purple" type="button" id="purple">5</div>
+        </div>
+    </div>
+
+
+    <button id="toggle-instructions">Toggle Instructions</button>
+    <div class="instruction-panel">
+        <!-- Add your instructions here -->
+        <p>Simon says: Follow the sequence of colors!</p>
+        <p>Game tests your memomry capcity</p>
+        <p>game ends once you choose the wrong sequence of colors</p>
+        <p>Have Fun!</p>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      
+        $(document).ready(function() {
+            $('#toggle-instructions').click(function() {
+                $('.instruction-panel').slideToggle(2000);
+            });
+        });
+    </script>
+</body>
+</html>
